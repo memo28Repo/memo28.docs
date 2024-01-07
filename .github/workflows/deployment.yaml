@@ -14,25 +14,6 @@ jobs:
         with:
           fetch-depth: 0
 
-#      - name: Install SSH client
-#        run: sudo apt-get install -y openssh-client
-#
-#      - name: Decrypt PEM file
-#        run: |
-#          mkdir -p ~/.ssh
-#          echo "$ENCRYPTED_PEM" | base64 -d - > ~/.ssh/id_rsa
-#          chmod 600 ~/.ssh/id_rsa
-#          ssh-keyscan 101.43.239.215 >> ~/.ssh/known_hosts
-#          chmod 644 ~/.ssh/known_hosts
-
-#      - name: Set up SSH
-#        run: |
-#          mkdir -p ~/.ssh
-#          echo -n "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-#          chmod 600 ~/.ssh/id_rsa
-#          ssh-keyscan 101.43.239.215 >> ~/.ssh/known_hosts
-#          chmod 644 ~/.ssh/known_hosts
-
       - name: Set up SSH connection
         uses: webfactory/ssh-agent@v0.5.4
         with:
@@ -40,7 +21,6 @@ jobs:
 
       - name: Add server's host key
         run: ssh-keyscan -H 101.43.239.215 >> ~/.ssh/known_hosts
-
 
 
       - name: setup node
@@ -58,7 +38,5 @@ jobs:
       - name: change the folder name
         run:  mv ./docs/.vitepress/dist ./memo28.docs
 
-
       - name: Deploy to Tencent Cloud Server
-        run: scp -v -r ./memo28.docs/* root@101.43.239.215:/usr/src
-#        run: scp -v -i ~/.ssh/id_rsa -r ./memo28.docs/* root@101.43.239.215:/usr/src
+        run: scp -v -r ./memo28.docs/* root@101.43.239.215:/usr/src/memo28.docs
