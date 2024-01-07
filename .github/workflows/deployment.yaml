@@ -41,7 +41,8 @@ jobs:
       - name: build
         run: pnpm install && pnpm run docs:build
 
+      - name: change the folder name
+        run:  mv ./docs/.vitepress/dist ./memo28.docs
+
       - name: Deploy to Tencent Cloud Server
-        run: |
-          mv ./docs/.vitepress/dist ./memo28.docs
-          scp -r -i ~/.ssh/id_rsa ./memo28.docs/* root@101.43.239.215:/usr/src
+        run: scp -r -i ~/.ssh/id_rsa ./memo28.docs/* root@101.43.239.215:/usr/src
