@@ -44,4 +44,4 @@ jobs:
       - name: Deploy to Tencent Cloud Server
         run: |
           mv ./docs/.vitepress/dist ./memo28.docs
-          scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./memo28.docs/* root@101.43.239.215:/usr/src
+          scp -r -i ~/.ssh/id_rsa ./memo28.docs/* root@101.43.239.215:/usr/src
