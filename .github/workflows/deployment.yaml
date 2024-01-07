@@ -19,6 +19,7 @@ jobs:
 
       - name: Decrypt PEM file
         run: |
+          mkdir -p ~/.ssh
           echo "$ENCRYPTED_PEM" | base64 -d - > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa  
           ssh-keyscan 101.43.239.215 >> ~/.ssh/known_hosts
