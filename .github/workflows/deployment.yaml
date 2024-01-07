@@ -38,4 +38,4 @@ jobs:
         run:  mv ./docs/.vitepress/dist ./memo28.docs
 
       - name: Deploy to Tencent Cloud Server
-        run: scp -r -v -i ~/.ssh/id_rsa ./memo28.docs/* root@101.43.239.215:/usr/src
+        run: scp -v -i ~/.ssh/id_rsa -r ./memo28.docs/* root@101.43.239.215:/usr/src
