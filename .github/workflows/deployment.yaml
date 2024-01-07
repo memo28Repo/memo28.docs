@@ -14,13 +14,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up SSH
+      - name: Install SSH client
+        run: sudo apt-get install -y openssh-client
+
+      - name: Decrypt PEM file
         run: |
-          mkdir -p ~/.ssh
-          echo -n "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          echo "$ENCRYPTED_PEM" | base64 -d - > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa  
           ssh-keyscan 101.43.239.215 >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
+
+#      - name: Set up SSH
+#        run: |
+#          mkdir -p ~/.ssh
+#          echo -n "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+#          chmod 600 ~/.ssh/id_rsa
+#          ssh-keyscan 101.43.239.215 >> ~/.ssh/known_hosts
+#          chmod 644 ~/.ssh/known_hosts
 
       - name: setup node
         uses: actions/setup-node@v3
