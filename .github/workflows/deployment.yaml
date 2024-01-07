@@ -37,12 +37,6 @@ jobs:
       - name: change the folder name
         run:  mv ./docs/.vitepress/dist ./memo28.docs
 
+
       - name: Deploy to Tencent Cloud Server
-        uses: appleboy/scp-action@master
-        with:
-         host: ${{ secrets.SERVER_SSH_HOST }} # 服务器域名
-         username: ${{ secrets.SERVER_SSH_USER }} # 腾讯云默认用户名为root
-         key: ${{ secrets.SERVER_SSH_KEY }} # 本地.ssh文件下的私钥id_rsa，存在secrets中
-         source: './memo28.docs' # 源目录，相对于$GITHUB_WORKSPACE根目录的路径
-         target: ${{ secrets.SERVER_SSH_TARGET }} # 目标目录
-#        run: scp -v -i ~/.ssh/id_rsa -r ./memo28.docs/* root@101.43.239.215:/usr/src
+        run: scp -v -i ~/.ssh/id_rsa -r ./memo28.docs/* root@101.43.239.215:/usr/src
