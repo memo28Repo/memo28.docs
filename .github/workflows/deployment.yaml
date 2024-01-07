@@ -14,13 +14,20 @@ jobs:
         with:
           fetch-depth: 0
 
-#      - name: output
-#        run: echo ${{ secrets.SSH_PRIVATE_KEY }}
+      #      - name: output
+      #        run: echo ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: SetupSSH
-        uses: webfactory/ssh-agent@v0.8.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #      - name: SetupSSH
+      #        uses: webfactory/ssh-agent@v0.8.0
+      #        with:
+      #          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo -n "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan 101.43.239.215 >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
 
       - name: setup node
         uses: actions/setup-node@v3
@@ -36,5 +43,5 @@ jobs:
 
       - name: Deploy to Tencent Cloud Server
         run: |
-         mv ./dist ./memo28.docs
-         scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./memo28.docs/* root@101.43.239.215:/usr/src
+          mv ./dist ./memo28.docs
+          scp -r -i ${{ secrets.SSH_PRIVATE_KEY }} ./memo28.docs/* root@101.43.239.215:/usr/src
