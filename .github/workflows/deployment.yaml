@@ -14,8 +14,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: output
-        run: echo ${{ secrets.TENCENT_CLOUD_SSH_KEY }}
+#      - name: output
+#        run: echo ${{ secrets.TENCENT_CLOUD_SSH_KEY }}
 
       - name: SetupSSH
         uses: webfactory/ssh-agent@v0.5.3
