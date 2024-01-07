@@ -3,6 +3,10 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "cz": "git add . && pnpm cz-customizable"
+    "cz": "git add . && pnpm cz-customizable",
+    "installAll": "pnpm install"
+  },
+  "dependencies": {
+    "vitepress": "1.0.0-rc.35"
   }
 }

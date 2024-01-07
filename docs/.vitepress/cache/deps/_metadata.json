@@ -1,29 +1,40 @@
 {
-  "hash": "85ec4d3b",
-  "browserHash": "9d76decf",
+  "hash": "9373de75",
+  "configHash": "5b49f8fd",
+  "lockfileHash": "70a664aa",
+  "browserHash": "c6891b1a",
   "optimized": {
     "vue": {
-      "src": "../../../../../../../../node_modules/.pnpm/vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../node_modules/.pnpm/vue@3.4.4/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "575a9b94",
+      "fileHash": "e9024d94",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
-      "src": "../../../../../../../../node_modules/.pnpm/@vue+devtools-api@6.5.1/node_modules/@vue/devtools-api/lib/esm/index.js",
+      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@6.5.1/node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "c1edd74b",
+      "fileHash": "279687cf",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../node_modules/.pnpm/@vueuse+core@10.7.1_vue@3.4.4/node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "5d01d517",
       "needsInterop": false
     },
     "@theme/index": {
-      "src": "../../../../../../../../Library/pnpm/global/5/.pnpm/vitepress@1.0.0-rc.24_@algolia+client-search@4.20.0_@types+node@12.20.55_search-insights@2.9.0_typescript@5.1.6/node_modules/vitepress/dist/client/theme-default/index.js",
+      "src": "../../../../node_modules/.pnpm/vitepress@1.0.0-rc.35_@algolia+client-search@4.22.0_search-insights@2.13.0/node_modules/vitepress/dist/client/theme-default/index.js",
       "file": "@theme_index.js",
-      "fileHash": "d9feef32",
+      "fileHash": "f4b6ffcf",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-IAKOMFOO": {
-      "file": "chunk-IAKOMFOO.js"
+    "chunk-JLHYCG5O": {
+      "file": "chunk-JLHYCG5O.js"
+    },
+    "chunk-CGCU5UOF": {
+      "file": "chunk-CGCU5UOF.js"
     }
   }
 }
