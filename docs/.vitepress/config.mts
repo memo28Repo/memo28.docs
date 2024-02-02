@@ -27,13 +27,13 @@ export default defineConfig({
         ],
 
         sidebar: [
-            {
-                text: 'Examples',
-                items: [
-                    {text: 'Markdown Examples', link: '/markdown-examples'},
-                    {text: 'Runtime API Examples', link: '/api-examples'}
-                ]
-            },
+            // {
+            //     text: 'Examples',
+            //     items: [
+            //         {text: 'Markdown Examples', link: '/markdown-examples'},
+            //         {text: 'Runtime API Examples', link: '/api-examples'}
+            //     ]
+            // },
             {
                 text: '@memo28/service',
                 items: [
@@ -57,9 +57,15 @@ export default defineConfig({
                     {text: '快速开始', link: '/vue/guide'},
                     {text: 'API列表', link: '/vue/api'},
                 ]
+            },
+            {
+                text: '@memo28.monitoring/sdkBrowser',
+                items: [
+                    {text: '快速开始', link: '/sdkBrowser/guide'},
+                    {text: '配置', link: '/sdkBrowser/config'},
+                ]
             }
         ],
-
         socialLinks: [
             {icon: 'github', link: 'https://github.com/memo28Repo/memoRepo'}
         ]
