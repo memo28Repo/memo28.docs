@@ -64,7 +64,14 @@ export default defineConfig({
                     {text: '快速开始', link: '/sdkBrowser/guide'},
                     {text: '配置', link: '/sdkBrowser/config'},
                 ]
-            }
+            },
+            {
+                text: '@memo28/types',
+                items: [
+                    {text: '快速开始', link: '/types/guide'},
+                    {text: '配置', link: '/types/types'},
+                ]
+            },
         ],
         socialLinks: [
             {icon: 'github', link: 'https://github.com/memo28Repo/memoRepo'}

@@ -86,7 +86,7 @@ http({
 
 默认使用 `Map` 缓存数据
 
-你也可定义自己的缓存逻辑
+你也可定义自己的缓存逻辑 [参考](https://github.com/memo28Repo/memoRepo/blob/main/service/service/src/plugin/cache/impl/local.ts)
 
 ```ts
 import {
