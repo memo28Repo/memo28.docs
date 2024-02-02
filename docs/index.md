@@ -9,10 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始示例
-      link: /markdown-examples
-    - theme: alt
-      text: API 文档
-      link: /api-examples
+      link: /service/guide
 
 features:
   - title: 为人体工学设计 🚀 
