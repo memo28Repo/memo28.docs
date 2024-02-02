@@ -79,6 +79,7 @@ export default defineConfig({
                     {text: '注入(injection', link: '/utils/injection'},
                     {text: '验证(verify', link: '/utils/verify'},
                     {text: '定义错误(error', link: '/utils/error'},
+                    {text: '扩展基础类型(extends', link: '/utils/extends'},
                     // {text: '读写分离(readWr', link: '/utils/readwr'},
                 ]
             },

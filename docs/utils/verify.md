@@ -4,6 +4,41 @@ outline: deep
 
 # 验证相关`api`
 
+
+## `Chinese`
+
+```ts
+/**
+ *
+ * 验证输入是否为中文
+ *
+ * @public
+ *
+ */
+export declare class Chinese extends VerificationFlow<str> {
+    private msg?;
+    constructor(s: str, msg?: string | undefined);
+    verification(args?: str): Panic<str>;
+}
+```
+
+
+## `Emoji`
+
+```ts
+/**
+ *
+ * 验证emoji，不通过时 get 不会返回错值
+ *
+ * @public
+ */
+export declare class Emoji extends VerificationFlow<str> {
+    private msg?;
+    constructor(phone?: str, msg?: string | undefined);
+    verification(args?: string): Panic<string>;
+}
+```
+
 ## `Mail`
 
 ```ts
