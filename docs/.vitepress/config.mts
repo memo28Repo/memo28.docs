@@ -69,7 +69,17 @@ export default defineConfig({
                 text: '@memo28/types',
                 items: [
                     {text: '快速开始', link: '/types/guide'},
-                    {text: '配置', link: '/types/types'},
+                    {text: 'types', link: '/types/types'},
+                ]
+            },
+            {
+                text: '@memo28/utils',
+                items: [
+                    {text: '快速开始', link: '/utils/guide'},
+                    {text: '注入(injection', link: '/utils/injection'},
+                    {text: '验证(verify', link: '/utils/verify'},
+                    {text: '定义错误(error', link: '/utils/error'},
+                    // {text: '读写分离(readWr', link: '/utils/readwr'},
                 ]
             },
         ],
