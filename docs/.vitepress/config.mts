@@ -63,6 +63,7 @@ export default defineConfig({
                 items: [
                     {text: '快速开始', link: '/sdkBrowser/guide'},
                     {text: '配置', link: '/sdkBrowser/config'},
+                    {text: '开始使用', link: '/sdkBrowser/started'},
                 ]
             },
             {
