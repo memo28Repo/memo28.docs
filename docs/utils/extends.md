@@ -16,7 +16,7 @@ interface String {
      *
      * @public
      */
-    equal(val: string | number): boolean
+    equal(val: string | number): boolean;
 
 
     /**
@@ -35,7 +35,15 @@ interface String {
      *
      * @public
      */
-    capitalize(): string
+    capitalize(): string;
+
+    /**
+     *
+     * 是否包含 containerValue 字符串
+     *
+     * @public
+     */
+    container(containerValue?: string): boolean;
 
 
     /**
@@ -50,13 +58,14 @@ interface String {
      * @public
      *
      */
-    escapeRegexp(): string
+    escapeRegexp(): string;
 }
 ```
 
 ## `Number`
 
 ```ts
+
 interface Number {
     /**
      *
@@ -66,18 +75,34 @@ interface Number {
      *
      * @public
      */
-    equal(val: string | number): boolean
+    equal(val: string | number): boolean;
 
 
     /**
      *
      *
-     * @param mark
+     * 打印日志
+     *
+     * @param mark -  打印标识
      *
      * @public
      */
     log(mark?: string): string | number;
+
+
+    /**
+     *
+     * 返回自动生成随机数 不会修改原来数字
+     *
+     * @param min - 最小数字
+     *
+     * @param max - 最大数字
+     *
+     * @public
+     */
+    random(min: number, max: number): number;
 }
+
 
 ```
 
