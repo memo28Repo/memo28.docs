@@ -48,7 +48,6 @@ export default defineConfig({
                 text: '@memo28/viteBuild',
                 items: [
                     {text: '快速开始', link: '/viteBuild/guide'},
-                    {text: '插件列表', link: '/service/plugins'},
                 ]
             },
             {
